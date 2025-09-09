@@ -1,0 +1,32 @@
+# Nginx Commands for Windows
+
+# Start Nginx
+start nginx
+
+# Stop Nginx Immediately
+nginx -s stop
+
+# Quit Nginx Gracefully
+nginx -s quit
+
+# Reload Nginx Configuration
+nginx -s reload
+
+# Test Nginx Configuration for Syntax Errors
+nginx -t
+
+# Start Nginx as a Windows Service (using NSSM)
+nssm install nginx C:\nginx\nginx.exe
+
+# Start Nginx Service (if installed as a service)
+nssm start nginx
+
+# Stop Nginx Service (if installed as a service)
+nssm stop nginx
+
+# Remove Nginx Service (if installed as a service)
+nssm remove nginx
+
+netstat -ano | findstr "LISTENING"   // check running server
+
+taskkill /F /IM nginx.exe     //kill nginx
